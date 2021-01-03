@@ -1,0 +1,24 @@
+PROCEDURE swap(VAR x, VAR y : INTEGER)
+VAR
+   tmp : INTEGER;
+BEGIN
+  tmp := x;
+  x := y;
+  y := tmp;
+END
+
+
+
+
+PROCEDURE Insertion-Sort(VAR arr : ARRAY_OF INTEGER[n])
+VAR
+    i,j:INTEGER
+BEGIN
+    FOR i FROM 1 TO n STEP 1  DO
+        FOR j FROM 0 TO i-1 STEP 1 DO
+        IF (arr[j] > arr[i]) THEN
+            swap(arr[i],arr[j])
+        END_IF
+        END_FOR
+    END_FOR    
+END
